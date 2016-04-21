@@ -20,7 +20,7 @@
 				<img class="logo icon fa-paper-plane-o" src="images/logo.png">
 				<h1>Startup Fair 2016</h1>
 				<p>
-					STARTUP FAIR is the first business fair for startups held at UPC.
+					STARTUP FAIR is the first career fair for startups held at UPC.
 					<br />
 					We bring together the brightest students and high potential startups to foster networking experiences.
 					<br />
@@ -88,21 +88,21 @@
 					<form method="post" action="#">
 						<div class="row">
 							<div class="6u 12u(mobilep)">
-								<input type="text" name="name" placeholder="Name" />
+								<input id="name" type="text" name="name" placeholder="Name" />
 							</div>
-							<div class="6u 12u(mobilep)">
+							<!--<div class="6u 12u(mobilep)">
 								<input type="email" name="email" placeholder="Email" />
-							</div>
+							</div>-->
 						</div>
 						<div class="row">
 							<div class="12u">
-								<textarea name="message" placeholder="Message" rows="6"></textarea>
+								<textarea id="message" name="message" placeholder="Message" rows="6"></textarea>
 							</div>
 						</div>
 						<div class="row">
 							<div class="12u">
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Send Message" onclick="sendMail(); return false;" /></li>
 								</ul>
 							</div>
 						</div>
@@ -135,4 +135,16 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<script>
+		String.prototype.replaceAll = function(search, replacement) {
+			var target = this;
+			return target.split(search).join(replacement);
+		};
+		function sendMail() {
+			var subj = document.getElementById('name').value;
+			var msg  = document.getElementById('message').value;
+			msg.replaceAll("\n", "%0D%0A");
+			window.open('mailto:info@startupfairbcn.com?subject='+subj+'&body='+msg);
+		}
+	</script>
 </html>
