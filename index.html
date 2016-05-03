@@ -66,7 +66,9 @@
 
                 <div class="content">
                     <ul class="actions">
-                        <li><input type="submit" value="Sponsorship Opportunities Available!" /></li>
+                        <li>
+                        	<a target="_blank" href="mailto:info@upcstartupfair.com" class="button"> Sponsorship Opportunities Available! <a/>
+                        </li>
                     </ul>
                 </div>
 
@@ -84,39 +86,17 @@
 
 						regarding this event, please send an email and we will get back to you straight away. </p>
 
-					<form method="post" action="#">
-						<div class="row">
-							<div class="6u 12u(mobilep)">
-								<input id="name" type="text" name="name" placeholder="Name" />
-							</div>
-							<!--<div class="6u 12u(mobilep)">
-								<input type="email" name="email" placeholder="Email" />
-							</div>-->
-						</div>
-						<div class="row">
-							<div class="12u">
-								<textarea id="message" name="message" placeholder="Message" rows="6"></textarea>
-							</div>
-						</div>
-						<div class="row">
-							<div class="12u">
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" onclick="sendMail(); return false;" /></li>
-								</ul>
-							</div>
-						</div>
-					</form>
 
-					<!--<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					</ul>-->
+					<div class="content">
+	                    <ul class="actions">
+	                        <li>
+	                        	<a target="_blank" href="mailto:info@upcstartupfair.com" class="button"> Send a message </a>
+	                        </li>
+	                    </ul>
+	                </div>
 
 					<ul>
-						info@upcstartupfair.com
+						<a href="mailto:info@upcstartupfair.com">info@upcstartupfair.com</a>
 					</ul>
 
 					<div>
@@ -125,7 +105,7 @@
 						<a href="http://www.upcfounderslab.com/"><img src="images/transpaLogoUPCFLok.jpg" width="288" height="110"/></a>
 					</div>
 					<ul class="copyright">
-						<li>&copy; BIENE. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li data-biene="BIENE">&copy; Hackers@UPC & UPCFoundersLab</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 				</div>
@@ -139,16 +119,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-	<script>
-		String.prototype.replaceAll = function(search, replacement) {
-			var target = this;
-			return target.split(search).join(replacement);
-		};
-		function sendMail() {
-			var subj = document.getElementById('name').value;
-			var msg  = document.getElementById('message').value;
-			msg.replaceAll("\n", "%0D%0A");
-			window.open('mailto:info@startupfairbcn.com?subject='+subj+'&body='+msg);
-		}
-	</script>
 </html>
